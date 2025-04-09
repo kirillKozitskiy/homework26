@@ -2,35 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Super hero</title>
-    <style>
-        body{
-            font-family: Dialog, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: black;
-            text-align: center;
-        }
-
-        img{
-            width: 25%;
-            height: auto;
-        }
-
-        h3{
-            color: white;
-            margin-bottom: 15px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Example</title>
+    <!-- Подключение CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <img src="spider.jpg">
-    <hr>
-    <h3>
-        Spider-Man is a superhero in American comic books published by Marvel Comics.<br>
-        Created by writer-editor Stan Lee and artist Steve Ditko,<br>
-        he first appeared in the anthology comic book Amazing Fantasy #15<br>
-        in the Silver Age of Comic Books.<br>
-    </h3>
+    <div class="container mt-5">
+        <h1 class="text-center text-primary">Image Carousel with Bootstrap</h1>
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <!-- Индикаторы -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <!-- Слайды -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="spider.jpg" width="300" height="500" class="d-block w-100" alt="Первое изображение">
+                </div>
+                <div class="carousel-item">
+                    <img src="чпп.jpg" width="300" height="500" class="d-block w-100" alt="Второе изображение">
+                </div>
+                <div class="carousel-item">
+                    <img src="volga.jpg" width="300" height="500" class="d-block w-100" alt="Второе изображение">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
+        </div>
+
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
